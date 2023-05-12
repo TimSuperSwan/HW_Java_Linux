@@ -1,0 +1,171 @@
+r@ar-VirtualBox:~$ ll
+
+итого 164
+
+drwxr-x--- 16 ar   ar      4096 мая 12 19:07  ./
+
+drwxr-xr-x  3 root root    4096 апр  8 13:30  ../
+
+-rw-------  1 ar   ar      6051 апр 29 12:35  .bash_history
+
+-rw-r--r--  1 ar   ar       220 мар 26 20:32  .bash_logout
+
+-rw-r--r--  1 ar   ar      3771 мар 26 20:32  .bashrc
+
+drwx------ 13 ar   ar      4096 апр  5 20:38  .cache/
+
+drwx------ 14 ar   ar      4096 мар 28 22:08  .config/
+
+drwxrwxr-x  2 ar   ar      4096 мар 26 21:24  hello_linux/
+
+-rw-------  1 ar   ar        20 апр 21 18:43  .lesshst
+
+drwx------  3 ar   ar      4096 мар 26 21:14  .local/
+
+-rw-rw-r--  1 ar   ar       267 апр 29 12:27  print100
+
+-rw-rw-r--  1 ar   ar         0 апр 29 12:26  print100~
+
+-rw-r--r--  1 ar   ar       807 мар 26 20:32  .profile
+
+-rw-rw-r--  1 ar   ar        66 апр  8 13:28  .selected_editor
+
+drwxrwx---  1 root vboxsf 49152 апр 28 19:10  shared/
+
+drwx------  5 ar   ar      4096 апр  8 11:39  snap/
+
+-rw-r--r--  1 ar   ar       905 мар 28 23:05  ssh
+
+-rw-r--r--  1 ar   ar         0 мар 28 21:11  .sudo_as_admin_successful
+
+-rw-rw-r--  1 ar   ar        53 апр 29 12:25  user3.sh
+
+-rw-rw-r--  1 ar   ar         0 апр 29 12:24  user3.sh~
+
+-rw-r-----  1 ar   ar         5 мая 12 19:06  .vboxclient-clipboard.pid
+
+-rw-r-----  1 ar   ar         5 мая 12 19:07  .vboxclient-draganddrop.pid
+
+-rw-r-----  1 ar   ar         5 мая 12 19:07  .vboxclient-seamless.pid
+
+-rw-r-----  1 ar   ar         5 мая 12 19:07  .vboxclient-vmsvga-session-tty2.pid
+
+drwxr-xr-x  2 ar   ar      4096 мар 26 21:14  Видео/
+
+drwxr-xr-x  2 ar   ar      4096 мар 26 21:14  Документы/
+
+drwxr-xr-x  2 ar   ar      4096 мар 28 22:20  Загрузки/
+
+drwxr-xr-x  2 ar   ar      4096 мар 26 21:14  Изображения/
+
+drwxr-xr-x  2 ar   ar      4096 мар 26 21:14  Музыка/
+
+drwxr-xr-x  2 ar   ar      4096 мар 26 21:14  Общедоступные/
+
+drwxr-xr-x  2 ar   ar      4096 мар 28 22:20 'Рабочий стол'/
+
+drwxr-xr-x  2 ar   ar      4096 мар 26 21:14  Шаблоны/
+
+ar@ar-VirtualBox:~$ sudo mkdir home
+
+[sudo] пароль для ar: 
+
+ar@ar-VirtualBox:~$ cd home
+
+ar@ar-VirtualBox:~/home$ ll
+
+итого 8
+
+drwxr-xr-x  2 root root 4096 мая 12 19:13 ./
+
+drwxr-x--- 17 ar   ar   4096 мая 12 19:10 ../
+
+ar@ar-VirtualBox:~/home$ sudo mkdir игрушки_для_школьников
+
+ar@ar-VirtualBox:~/home$ sudo mkdir игрушки_для_дошколят
+
+ar@ar-VirtualBox:~/home$ cd игрушки_для_школьников/
+
+ar@ar-VirtualBox:~/home/игрушки_для_школьников$ > Роботы
+
+ar@ar-VirtualBox:~/home/игрушки_для_школьников$ > Конструктор
+
+ar@ar-VirtualBox:~/home/игрушки_для_школьников$ > Настольные_Игры
+
+ar@ar-VirtualBox:~/home/игрушки_для_школьников$ cd ..
+
+ar@ar-VirtualBox:~/home/$ cd игрушки_для_дошколят
+
+ar@ar-VirtualBox:~/home/игрушки_для_дошколят$ > Мягкие_Игрушки
+
+ar@ar-VirtualBox:~/home/игрушки_для_дошколят$ > Куклы
+
+ar@ar-VirtualBox:~/home/игрушки_для_дошколят$ > Машинки
+
+ar@ar-VirtualBox:~/home/игрушки_для_школьников$ cd ..
+
+ar@ar-VirtualBox:~/home$ sudo mkdir merge
+
+ar@ar-VirtualBox:~/home$ ls
+
+merge  игрушки_для_дошколят  игрушки_для_школьников
+
+ar@ar-VirtualBox:~/home$ sudo mv игрушки_для_школьников merge
+
+ar@ar-VirtualBox:~/home$ ls
+
+merge  игрушки_для_дошколят
+
+ar@ar-VirtualBox:~/home$ mv игрушки_для_дошколят merge
+
+mv: невозможно переместить 'игрушки_для_дошколят' в 'merge/игрушки_для_дошколят': Отказано в доступе
+
+ar@ar-VirtualBox:~/home$ sudo mv игрушки_для_дошколят merge
+
+ar@ar-VirtualBox:~/home$ sudo mv merge игрушки
+
+ar@ar-VirtualBox:~/home$ ls
+
+игрушки
+
+ar@ar-VirtualBox:~/home$ cd игрушки/
+
+ar@ar-VirtualBox:~/home/игрушки$ tree -g
+
+[root    ]  .
+
+├── [root    ]  игрушки_для_дошколят
+
+└── [root    ]  игрушки_для_школьников
+
+    └── [root    ]  роботы
+
+
+
+2 directories, 1 file
+
+ar@ar-VirtualBox:~/home/игрушки$ sudo snap install firefox
+
+snap-пакет "firefox" уже установлен, см. 'snap help refresh'
+
+ar@ar-VirtualBox:~/home/игрушки$ sudo snap remove firefox
+
+firefox удалён
+
+ar@ar-VirtualBox:~/home/игрушки$ sudo vi /usr/local/bin/script.sh
+
+    #!/bin/bash
+
+    echo $(date) >> /var/log/testcron.log
+
+    :w!
+
+    :q
+
+ar@ar-VirtualBox:~/home/игрушки$ sudo chmod ugo+x /usr/local/bin/script.sh
+
+ar@ar-VirtualBox:~/home/игрушки$ sudo crontab -e
+
+    0/3 * * * * /usr/local/bin/script.sh
+
+crontab: installing new crontab
